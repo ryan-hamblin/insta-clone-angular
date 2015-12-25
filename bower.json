@@ -1,0 +1,27 @@
+{
+  "name": "insta-clone",
+  "authors": [
+    "Ryan Hamblin <ryanhca@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "URM",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "Ionicons": "ionicons#~2.0.1",
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-messages": "~1.4.8"
+  }
+}
