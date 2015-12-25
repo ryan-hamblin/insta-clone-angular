@@ -1,5 +1,5 @@
 angular.module('Insta_Clone', ['ngRoute', 'ngMessages', 'satellizer'])
-	.config(function($routeProvider){
+	.config(function($routeProvider, $authProvider){
 		$routeProvider
 		  .when('/', {
 		    templateUrl: 'views/home.html',
@@ -18,4 +18,17 @@ angular.module('Insta_Clone', ['ngRoute', 'ngMessages', 'satellizer'])
 		    controller: 'DetailCtrl'
 		  })
 		  .otherwise('/');
+
+		  $authProvider.loginUrl = 'http://localhost:3000/auth/login';
+			$authProvider.signupUrl = 'http://localhost:3000/auth/signup';
+			$authProvider.oauth2({
+			  name: 'instagram',
+			  url: 'http://localhost:3000/auth/instagram',
+			  redirectUri: 'http://localhost:3000',
+			  clientId: '	db041600c8cc4ccda0db406dc5ab39a8',
+			  requiredUrlParams: ['scope'],
+			  scope: ['likes'],
+			  scopeDelimiter: '+',
+			  authorizationEndpoint: 'https://api.instagram.com/oauth/authorize'
+			});
 	});
