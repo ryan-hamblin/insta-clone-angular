@@ -1,5 +1,5 @@
-angular.module('Instagram')
-  .controller('SignupCtrl', function($scope, $auth) {
+angular.module('Insta_Clone')
+  .controller('SignupCtrl', function($scope, $auth, API) {
 
     $scope.signup = function() {
       var user = {

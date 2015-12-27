@@ -1,6 +1,6 @@
 angular.module('Insta_Clone')
 
-	.controller('LoginCtrl', function($scope, $window, $location, $rootScope, $auth){
+	.controller('LoginCtrl', function($scope, $window, $location, $rootScope, $auth, API){
 
 		$scope.instagramLogin = function(){
 			$auth.authenticate('instagram')
